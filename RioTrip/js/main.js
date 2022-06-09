@@ -142,5 +142,7 @@
     Fancybox
     -------------------------------*/
     $('[data-fancybox="gallery"]').fancybox();
+	
+
 
 }(jQuery));
