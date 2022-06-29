@@ -4,7 +4,33 @@
     $(document).ready(function($){
 
         // homepage slider
-        $(".owl-carousel").owlCarousel({
+		   $(".slider-area").owlCarousel({
+            items: 1,
+            loop: false,
+            autoplay: true,
+            nav: false,
+            dots: false,
+			mouseDrag: false,
+			animateOut: 'fadeOut',
+            responsive:{
+                0:{
+                    items:1,
+                    nav:false,
+                    loop:true
+                },
+                600:{
+                    items:1,
+                    nav:true,
+                    loop:true
+                },
+                1000:{
+                    items:1,
+                    nav:true,
+                    loop:true
+                }
+            }
+        });
+        $(".package-carousel").owlCarousel({
             items: 4,
             loop: true,
             autoplay: false,
@@ -29,7 +55,32 @@
                 }
             }
         });
-
+        // homepage slider
+        $(".hotels-carousel").owlCarousel({
+            items: 2,
+            loop: true,
+            autoplay: false,
+            nav: true,
+            dots: false,
+            navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+            responsive:{
+                0:{
+                    items:1,
+                    nav:false,
+                    loop:true
+                },
+                600:{
+                    items:2,
+                    nav:true,
+                    loop:true
+                },
+                1000:{
+                    items:2,
+                    nav:true,
+                    loop:true
+                }
+            }
+        });
 
         // count down
         if($('.time-countdown').length){  
@@ -146,3 +197,4 @@
 
 
 }(jQuery));
+
